@@ -1,0 +1,76 @@
+/* ====================================== _____________ Footer Styles _____________ ====================================== */
+footer{
+    padding-bottom: 15px;
+    background-color: $onBlkColor;
+    .footer{
+        padding: 60px 0 30px;
+        background-color: $onBlkColor;
+        &_title{
+            color: $whtColor;
+            font-size: $bigFont;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        &_list {
+            padding: 0;
+            margin: 0;
+            &_item{
+                margin:  10px 0;
+                &-title{
+                    margin-bottom: 15px;
+                    text-transform: uppercase;
+                    color: $offWhiteColor;
+                    font-size: $paragraphFont;
+                }
+                &_link{
+                    color: $offWhiteColor;
+                    text-transform: uppercase;
+                    font-size: $paragraphFont;
+                    @include hoverLink;
+                    &.text-normal{
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+        &_branchDetails{
+            color: $offWhiteColor;
+            &_text{
+                span{
+                    display: block;
+                    margin: 10px 0;
+                    text-transform: uppercase;
+                    font-size: $paragraphFont;
+                }
+            }
+        }
+        &_socialList{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+            &_item{
+                margin: 0 10px;
+                &_link{
+                    color: $offWhiteColor;
+                    @include hoverLink;
+                }
+            }
+        }
+    }
+    .copyright{
+        padding: 25px 0;
+        background-color: $blkColor;
+        p{
+            font-size: $paragraphFont;
+            font-weight: 400;
+            color: $offWhiteColor;
+            margin-bottom: 0;
+            text-align: center;
+        }
+    }
+}
+/* ====================================== _____________ Footer Styles _____________ ====================================== */

@@ -1,0 +1,855 @@
+/* ====================================== _____________ Variables Styles _____________ ====================================== */
+/* ====================================== _____________ Variables Styles _____________ ====================================== */
+/* ====================================== _____________ Functions Styles _____________ ====================================== */
+/* ====================================== _____________ Functions Styles _____________ ====================================== */
+/* ====================================== _____________ Mixin Styles _____________ ====================================== */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #fdfdfd;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #fdfdfd;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-o-keyframes inputHighlighter {
+  from {
+    background: #fdfdfd;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: #fdfdfd;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+/* ====================================== _____________ Mixin Styles _____________ ====================================== */
+/* ====================================== _____________ Classes Styles _____________ ====================================== */
+.container_manual {
+  width: 95%;
+  margin: auto;
+  padding: 0 15px;
+}
+.navbar .container_manual {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 576px) {
+  .container_manual {
+    width: 100%;
+  }
+}
+
+.mainColor {
+  color: #e51937;
+}
+
+.mainBgColor {
+  background-color: #e51937;
+}
+
+/* ====================================== _____________ Classes Styles _____________ ====================================== */
+/* ====================================== _____________ Reset Styles _____________ ====================================== */
+* {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+html {
+  font-size: 100%;
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 85%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  html {
+    font-size: 88%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 90%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  html {
+    font-size: 95%;
+  }
+}
+
+body {
+  font-family: "Avenir LT Std";
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+/* ====================================== _____________ Reset Styles _____________ ====================================== */
+/* ====================================== _____________ Fonts Styles _____________ ====================================== */
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("fonts/AvenirLTStd-Black.eot");
+  src: url("fonts/AvenirLTStd-Black.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirLTStd-Black.woff2") format("woff2"), url("fonts/AvenirLTStd-Black.woff") format("woff"), url("fonts/AvenirLTStd-Black.ttf") format("truetype"), url("fonts/AvenirLTStd-Black.svg#AvenirLTStd-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("fonts/AvenirLTStd-BlackOblique.eot");
+  src: url("fonts/AvenirLTStd-BlackOblique.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirLTStd-BlackOblique.woff2") format("woff2"), url("fonts/AvenirLTStd-BlackOblique.woff") format("woff"), url("fonts/AvenirLTStd-BlackOblique.ttf") format("truetype"), url("fonts/AvenirLTStd-BlackOblique.svg#AvenirLTStd-BlackOblique") format("svg");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("fonts/AvenirLTStd-Book.eot");
+  src: url("fonts/AvenirLTStd-Book.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirLTStd-Book.woff2") format("woff2"), url("fonts/AvenirLTStd-Book.woff") format("woff"), url("fonts/AvenirLTStd-Book.ttf") format("truetype"), url("fonts/AvenirLTStd-Book.svg#AvenirLTStd-Book") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("fonts/AvenirLTStd-Book_1.eot");
+  src: url("fonts/AvenirLTStd-Book_1.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirLTStd-Book_1.woff2") format("woff2"), url("fonts/AvenirLTStd-Book_1.woff") format("woff"), url("fonts/AvenirLTStd-Book_1.ttf") format("truetype"), url("fonts/AvenirLTStd-Book_1.svg#AvenirLTStd-Book") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("fonts/AvenirLTStd-Oblique.eot");
+  src: url("fonts/AvenirLTStd-Oblique.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirLTStd-Oblique.woff2") format("woff2"), url("fonts/AvenirLTStd-Oblique.woff") format("woff"), url("fonts/AvenirLTStd-Oblique.ttf") format("truetype"), url("fonts/AvenirLTStd-Oblique.svg#AvenirLTStd-Oblique") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("fonts/AvenirLTStd-Medium.eot");
+  src: url("fonts/AvenirLTStd-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirLTStd-Medium.woff2") format("woff2"), url("fonts/AvenirLTStd-Medium.woff") format("woff"), url("fonts/AvenirLTStd-Medium.ttf") format("truetype"), url("fonts/AvenirLTStd-Medium.svg#AvenirLTStd-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("fonts/AvenirLTStd-Heavy.eot");
+  src: url("fonts/AvenirLTStd-Heavy.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirLTStd-Heavy.woff2") format("woff2"), url("fonts/AvenirLTStd-Heavy.woff") format("woff"), url("fonts/AvenirLTStd-Heavy.ttf") format("truetype"), url("fonts/AvenirLTStd-Heavy.svg#AvenirLTStd-Heavy") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("fonts/AvenirLTStd-LightOblique.eot");
+  src: url("fonts/AvenirLTStd-LightOblique.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirLTStd-LightOblique.woff2") format("woff2"), url("fonts/AvenirLTStd-LightOblique.woff") format("woff"), url("fonts/AvenirLTStd-LightOblique.ttf") format("truetype"), url("fonts/AvenirLTStd-LightOblique.svg#AvenirLTStd-LightOblique") format("svg");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("fonts/AvenirLTStd-HeavyOblique.eot");
+  src: url("fonts/AvenirLTStd-HeavyOblique.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirLTStd-HeavyOblique.woff2") format("woff2"), url("fonts/AvenirLTStd-HeavyOblique.woff") format("woff"), url("fonts/AvenirLTStd-HeavyOblique.ttf") format("truetype"), url("fonts/AvenirLTStd-HeavyOblique.svg#AvenirLTStd-HeavyOblique") format("svg");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("fonts/AvenirLTStd-Light.eot");
+  src: url("fonts/AvenirLTStd-Light.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirLTStd-Light.woff2") format("woff2"), url("fonts/AvenirLTStd-Light.woff") format("woff"), url("fonts/AvenirLTStd-Light.ttf") format("truetype"), url("fonts/AvenirLTStd-Light.svg#AvenirLTStd-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("fonts/AvenirLTStd-MediumOblique.eot");
+  src: url("fonts/AvenirLTStd-MediumOblique.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirLTStd-MediumOblique.woff2") format("woff2"), url("fonts/AvenirLTStd-MediumOblique.woff") format("woff"), url("fonts/AvenirLTStd-MediumOblique.ttf") format("truetype"), url("fonts/AvenirLTStd-MediumOblique.svg#AvenirLTStd-MediumOblique") format("svg");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("fonts/AvenirLTStd-BookOblique.eot");
+  src: url("fonts/AvenirLTStd-BookOblique.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirLTStd-BookOblique.woff2") format("woff2"), url("fonts/AvenirLTStd-BookOblique.woff") format("woff"), url("fonts/AvenirLTStd-BookOblique.ttf") format("truetype"), url("fonts/AvenirLTStd-BookOblique.svg#AvenirLTStd-BookOblique") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("fonts/AvenirLTStd-Roman.eot");
+  src: url("fonts/AvenirLTStd-Roman.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirLTStd-Roman.woff2") format("woff2"), url("fonts/AvenirLTStd-Roman.woff") format("woff"), url("fonts/AvenirLTStd-Roman.ttf") format("truetype"), url("fonts/AvenirLTStd-Roman.svg#AvenirLTStd-Roman") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* ====================================== _____________ Fonts Styles _____________ ====================================== */
+/* ====================================== _____________ Global Styles _____________ ====================================== */
+/* ====================================== _____________ Global Styles _____________ ====================================== */
+/* ====================================== _____________ Buttons Styles _____________ ====================================== */
+/* ====================================== _____________ Buttons Styles _____________ ====================================== */
+/* ====================================== _____________ Slider Styles _____________ ====================================== */
+/* ====================================== _____________ Slider Styles _____________ ====================================== */
+/* ====================================== _____________ Slider Styles _____________ ====================================== */
+/* ====================================== _____________ Slider Styles _____________ ====================================== */
+/* ====================================== _____________ Side Button Burger Styles _____________ ====================================== */
+.side_button {
+  margin-top: 0;
+  width: 25px;
+  height: 20px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+}
+.side_button span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  background: #a7a3a2;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.side_button span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 9px 9px 0;
+}
+.side_button span:nth-child(odd) {
+  left: 0px;
+  border-radius: 9px 0 0 9px;
+}
+.side_button span:nth-child(1), .side_button span:nth-child(2) {
+  top: 0px;
+}
+.side_button span:nth-child(3), .side_button span:nth-child(4) {
+  top: 8px;
+}
+.side_button span:nth-child(5), .side_button span:nth-child(6) {
+  top: 16px;
+}
+.side_button.open span:nth-child(1), .side_button.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.side_button.open span:nth-child(2), .side_button.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.side_button.open span:nth-child(1) {
+  left: 3px;
+  top: 6px;
+}
+.side_button.open span:nth-child(2) {
+  left: calc(50% - 3px);
+  top: 6px;
+}
+.side_button.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+.side_button.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+.side_button.open span:nth-child(5) {
+  left: 3px;
+  top: 13px;
+}
+.side_button.open span:nth-child(6) {
+  left: calc(50% - 3px);
+  top: 13px;
+}
+
+.burger_menu:hover .burger_menu_text, .burger_menu.open .burger_menu_text {
+  color: #fff;
+}
+.burger_menu:hover .side_button span, .burger_menu.open .side_button span {
+  background-color: #fff;
+}
+
+/* ====================================== _____________ Side Button Burger Styles _____________ ====================================== */
+/* ====================================== _____________ Grids Styles _____________ ====================================== */
+/* ====================================== _____________ Grids Styles _____________ ====================================== */
+/* ====================================== _____________ Header Styles _____________ ====================================== */
+header {
+  padding: 15px 0;
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+header.header_slide {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+header.header_slide .navbar_list {
+  border-bottom: 1px solid #a7a3a2;
+  padding-bottom: 10px;
+}
+header .navbar {
+  padding: 0;
+  flex-direction: column;
+}
+header .navbar_brand img {
+  width: 150px;
+}
+@media (max-width: 576px) {
+  header .navbar_brand img {
+    width: 80px;
+  }
+}
+header .navbar_list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+header .navbar_list_item {
+  margin: 0 8px;
+}
+@media (max-width: 576px) {
+  header .navbar_list_item {
+    margin: 0 3px;
+  }
+}
+header .navbar_list_item.search {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+header .navbar_list_item.search i {
+  font-size: 1.1rem !important;
+}
+header .navbar_list_item.search.p_left {
+  padding-left: 200px;
+}
+header .navbar_list_item_link {
+  font-size: 0.9rem;
+  color: #a7a3a2;
+  position: relative;
+  padding-bottom: 2px;
+  transition: all 0.3s ease-in-out;
+}
+header .navbar_list_item_link::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #e51937;
+  transition: all 0.3s ease-in-out;
+}
+header .navbar_list_item_link:hover {
+  color: #fff;
+}
+header .navbar_list_item_link:hover::before {
+  width: 100%;
+}
+.country_lang header .navbar_list_item_link {
+  color: #fff;
+}
+header .navbar_list_item_text {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #a7a3a2;
+  margin-right: 15px;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 576px) {
+  header .navbar_list_item_text {
+    margin-right: 5px;
+  }
+}
+header .navbar_list_item.dropdown {
+  position: relative;
+}
+header .navbar_list_item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+header .navbar_list_item.dropdown .dropdown-menu {
+  right: 0;
+  top: 99%;
+  left: auto;
+  min-width: 350px;
+  padding: 12px 18px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 576px) {
+  header .navbar_list_item.dropdown .dropdown-menu {
+    right: -50%;
+    transform: translateX(9%);
+  }
+}
+header .navbar_list_item.dropdown .dropdown-menu .dropdown_content_title {
+  font-size: 0.9rem;
+  padding-bottom: 5px;
+  position: relative;
+}
+header .navbar_list_item.dropdown .dropdown-menu .dropdown_content_title::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 15%;
+  height: 1.5px;
+  background-color: #e51937;
+  z-index: 1;
+}
+header .navbar_list_item.dropdown .dropdown-menu .dropdown_content .dropdown-item {
+  padding: 0;
+  padding-bottom: 5px;
+  margin: 5px 0;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  font-size: 0.9rem;
+}
+header .navbar_list_item.dropdown .dropdown-menu .dropdown_content .dropdown-item::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  transition: all 0.3s ease-in-out;
+  height: 1px;
+  background-color: #e51937;
+}
+header .navbar_list_item.dropdown .dropdown-menu .dropdown_content .dropdown-item:hover {
+  background-color: transparent;
+}
+header .navbar_list_item.dropdown .dropdown-menu .dropdown_content .dropdown-item:hover::before {
+  width: 50%;
+}
+header .navbar_subnavbar {
+  margin-top: 10px;
+  padding: 15px 0;
+  display: none;
+}
+header .navbar_subnavbar_list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+header .navbar_subnavbar_list_item {
+  margin: 0 12px;
+}
+header .navbar_subnavbar_list_item_link {
+  color: #a7a3a2;
+  font-size: 0.9rem;
+  position: relative;
+  padding-bottom: 2px;
+  transition: all 0.3s ease-in-out;
+}
+header .navbar_subnavbar_list_item_link::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #e51937;
+  transition: all 0.3s ease-in-out;
+}
+header .navbar_subnavbar_list_item_link:hover {
+  color: #fff;
+}
+header .navbar_subnavbar_list_item_link:hover::before {
+  width: 100%;
+}
+
+/* ====================================== _____________ Header Styles _____________ ====================================== */
+/* ====================================== _____________ Footer Styles _____________ ====================================== */
+footer {
+  padding-bottom: 15px;
+  background-color: #111111;
+}
+footer .footer {
+  padding: 60px 0 30px;
+  background-color: #111111;
+}
+footer .footer_title {
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+footer .footer_list {
+  padding: 0;
+  margin: 0;
+}
+footer .footer_list_item {
+  margin: 10px 0;
+}
+footer .footer_list_item-title {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #a7a3a2;
+  font-size: 0.9rem;
+}
+footer .footer_list_item_link {
+  color: #a7a3a2;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  position: relative;
+  padding-bottom: 2px;
+  transition: all 0.3s ease-in-out;
+}
+footer .footer_list_item_link::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #e51937;
+  transition: all 0.3s ease-in-out;
+}
+footer .footer_list_item_link:hover {
+  color: #fff;
+}
+footer .footer_list_item_link:hover::before {
+  width: 100%;
+}
+footer .footer_list_item_link.text-normal {
+  text-transform: none;
+}
+footer .footer_branchDetails {
+  color: #a7a3a2;
+}
+footer .footer_branchDetails_text span {
+  display: block;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+footer .footer_socialList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+footer .footer_socialList_item {
+  margin: 0 10px;
+}
+footer .footer_socialList_item_link {
+  color: #a7a3a2;
+  position: relative;
+  padding-bottom: 2px;
+  transition: all 0.3s ease-in-out;
+}
+footer .footer_socialList_item_link::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #e51937;
+  transition: all 0.3s ease-in-out;
+}
+footer .footer_socialList_item_link:hover {
+  color: #fff;
+}
+footer .footer_socialList_item_link:hover::before {
+  width: 100%;
+}
+footer .copyright {
+  padding: 25px 0;
+  background-color: #000;
+}
+footer .copyright p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #a7a3a2;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* ====================================== _____________ Footer Styles _____________ ====================================== */
+/* ====================================== _____________ Sidebar Styles _____________ ====================================== */
+/* ====================================== _____________ Sidebar Styles _____________ ====================================== */
+/* ====================================== _____________ Forms Styles _____________ ====================================== */
+.form.form_search {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.form.form_search.open {
+  width: 200px;
+  opacity: 1;
+}
+.form.form_search .form-group {
+  position: relative;
+  margin-bottom: 0;
+}
+.form.form_search .form-group .form-control {
+  font-size: 1rem;
+  background-color: transparent;
+  padding: 8px 15px;
+  padding-left: 0;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #a7a3a2;
+  box-shadow: none;
+  outline: 0;
+  border-radius: 0;
+}
+.form.form_search .form-group .form-control:focus, .form.form_search .form-group .form-control.focused {
+  outline: none;
+  border-bottom: 1px solid transparent;
+}
+.form.form_search .form-group .form-control:focus ~ label, .form.form_search .form-group .form-control.focused ~ label {
+  top: -10px;
+  font-size: 0.9rem;
+  color: #e51937;
+}
+.form.form_search .form-group .form-control:focus ~ .bar::before, .form.form_search .form-group .form-control:focus ~ .bar::after, .form.form_search .form-group .form-control.focused ~ .bar::before, .form.form_search .form-group .form-control.focused ~ .bar::after {
+  width: 50%;
+}
+.form.form_search .form-group .form-control:focus ~ .highlight, .form.form_search .form-group .form-control.focused ~ .highlight {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 0.1s;
+  -moz-animation-iteration-count: 0.1s;
+  -o-animation-iteration-count: 0.1s;
+  animation-iteration-count: 0.1s;
+  -webkit-animation-name: inputHighlighter;
+  -moz-animation-name: inputHighlighter;
+  -o-animation-name: inputHighlighter;
+  animation-name: inputHighlighter;
+  -webkit-animation-direction: ease;
+  -moz-animation-direction: ease;
+  -o-animation-direction: ease;
+  animation-direction: ease;
+}
+.form.form_search .form-group label {
+  color: #a7a3a2;
+  font-size: 1rem;
+  font-weight: 600;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  top: 10px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 0;
+}
+.form.form_search .form-group .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.form.form_search .form-group .bar::before, .form.form_search .form-group .bar::after {
+  content: "";
+  height: 1px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #e51937;
+  transition: all 0.3s ease-in-out;
+}
+.form.form_search .form-group .bar::before {
+  left: 50%;
+}
+.form.form_search .form-group .bar::after {
+  right: 50%;
+}
+.form.form_search .form-group .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100%;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.form.form_selectBranches {
+  position: relative;
+}
+.form.form_selectBranches .form-control {
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+}
+.form.form_selectBranches .form-control::-ms-expand {
+  display: none;
+}
+.form.form_selectBranches .selectize-control.single .selectize-input,
+.form.form_selectBranches .selectize-control.single .selectize-input input {
+  background-color: transparent;
+  border: 1px solid #a7a3a2;
+  padding: 8px 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
+.form.form_selectBranches .selectize-control.single .selectize-input:focus, .form.form_selectBranches .selectize-control.single .selectize-input:hover, .form.form_selectBranches .selectize-control.single .selectize-input:visited, .form.form_selectBranches .selectize-control.single .selectize-input:valid, .form.form_selectBranches .selectize-control.single .selectize-input:active,
+.form.form_selectBranches .selectize-control.single .selectize-input input:focus,
+.form.form_selectBranches .selectize-control.single .selectize-input input:hover,
+.form.form_selectBranches .selectize-control.single .selectize-input input:visited,
+.form.form_selectBranches .selectize-control.single .selectize-input input:valid,
+.form.form_selectBranches .selectize-control.single .selectize-input input:active {
+  border-color: #e51937;
+}
+.form.form_selectBranches .selectize-control.single .selectize-input:after,
+.form.form_selectBranches .selectize-control.single .selectize-input input:after {
+  display: none;
+}
+.form.form_selectBranches .selectize-dropdown {
+  border: none;
+}
+.form.form_selectBranches .selectize-dropdown-content {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16) !important;
+  border: 1px solid #a7a3a2;
+  max-height: 200px;
+  overflow-y: scroll;
+  width: 100%;
+  padding: 10px;
+}
+.form.form_selectBranches .selectize-dropdown-content::-webkit-scrollbar {
+  width: 5px;
+}
+.form.form_selectBranches .selectize-dropdown-content::-webkit-scrollbar-track {
+  border-radius: 0;
+}
+.form.form_selectBranches .selectize-dropdown-content::-webkit-scrollbar-thumb {
+  background: #e51937;
+  border-radius: 0px;
+}
+.form.form_selectBranches .selectize-dropdown-content ::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 25, 55, 0.9);
+}
+.form.form_selectBranches .selectize-dropdown-content [data-selectable].option {
+  color: #a7a3a2;
+}
+.form.form_selectBranches .selectize-dropdown-content [data-selectable].option:hover, .form.form_selectBranches .selectize-dropdown-content [data-selectable].option.active {
+  background-color: #e51937;
+  color: #fff;
+}
+.form.form_selectBranches .submit {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #e51937;
+  color: #fff;
+  right: 5px;
+  top: 5px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+  padding: 1px;
+  z-index: 9;
+}
+@media (max-width: 991px) {
+  .form.form_selectBranches .submit {
+    top: 3px;
+  }
+}
+.form.form_selectBranches .submit:hover {
+  background-color: transparent;
+  border: 1px solid #e51937;
+}
+
+/* ====================================== _____________ Forms Styles _____________ ====================================== */
+/* ====================================== _____________ Home Page Styles _____________ ====================================== */
+.homePage .banner {
+  background-image: url(../img/homePage/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.homePage .banner::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* ====================================== _____________ Home Page Styles _____________ ====================================== */
+/* ====================================== _____________ Theme Styles _____________ ====================================== */
+/* ====================================== _____________ Theme Styles _____________ ====================================== */
+
+/*# sourceMappingURL=style.css.map */

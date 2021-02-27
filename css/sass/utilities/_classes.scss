@@ -1,0 +1,30 @@
+/* ====================================== _____________ Classes Styles _____________ ====================================== */
+// == Container //
+.container_manual{
+    width: 95%;
+    margin: auto;
+    padding: 0 015px;
+    .navbar & {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    @media (max-width : 576px) {
+        width: 100%;
+    }
+}
+// == Container //
+
+// == Hover Link //
+
+// == Hover Link //
+
+// == Color //
+.mainColor{color: $mainColor;}
+// == Color //
+
+// == Bg Color //
+.mainBgColor{background-color: $mainColor;}
+// == Bg Color //
+/* ====================================== _____________ Classes Styles _____________ ====================================== */
+

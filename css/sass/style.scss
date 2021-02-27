@@ -1,0 +1,20 @@
+// utilities imports
+@import "utilities/variables", "utilities/functions", "utilities/mixins",
+  "utilities/classes";
+
+// base imports
+@import "base/reset", "base/typography", "base/global";
+
+// components imports
+@import "components/buttons", "components/carousel", "components/slider",
+  "components/burgerMenuButton";
+
+// layout imports
+@import "layout/grid", "layout/header", "layout/footer", "layout/sidebar",
+  "layout/forms";
+
+// pages imports
+@import "pages/home";
+
+// themes imports
+@import "themes/theme";

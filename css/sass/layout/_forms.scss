@@ -1,0 +1,181 @@
+/* ====================================== _____________ Forms Styles _____________ ====================================== */
+// ___________ Search Form ____________ //
+.form {
+  &.form_search {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 0;
+    opacity: 0;
+    transition: $slowTransition;
+    &.open {
+      width: 200px;
+      opacity: 1;
+    }
+    .form-group {
+      position: relative;
+      margin-bottom: 0;
+      .form-control {
+        font-size: $mainFont;
+        background-color: transparent;
+        padding: 8px 15px;
+        padding-left: 0;
+        display: block;
+        border: none;
+        border-bottom: 1px solid $offWhiteColor;
+        box-shadow: none;
+        outline: 0;
+        border-radius: 0;
+        &:focus,
+        &.focused {
+          outline: none;
+          border-bottom: 1px solid transparent;
+          & ~ label {
+            top: -10px;
+            font-size: $paragraphFont;
+            color: $mainColor;
+          }
+          & ~ .bar {
+            &::before,
+            &::after {
+              width: 50%;
+            }
+          }
+          & ~ .highlight {
+            @include inputHighlighter;
+          }
+        }
+      }
+      label {
+        color: $offWhiteColor;
+        font-size: $mainFont;
+        font-weight: 600;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 0;
+        top: 10px;
+        transition: $mainTransition;
+        margin-bottom: 0;
+      }
+      .bar {
+        position: relative;
+        display: block;
+        width: 100%;
+        &::before,
+        &::after {
+          content: "";
+          height: 1px;
+          width: 0;
+          bottom: 1px;
+          position: absolute;
+          background: $mainColor;
+          transition: $mainTransition;
+        }
+        &::before {
+          left: 50%;
+        }
+        &::after {
+          right: 50%;
+        }
+      }
+      .highlight {
+        position: absolute;
+        height: 60%;
+        width: 100%;
+        top: 25%;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
+  }
+  &.form_selectBranches {
+    position: relative;
+    .form-control {
+      background-color: transparent;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border-radius: 0;
+      padding: 0;
+      border: none;
+      &::-ms-expand {
+        display: none;
+      }
+    }
+    .selectize-control.single .selectize-input,
+    .selectize-control.single .selectize-input input {
+      background-color: transparent;
+      border: 1px solid $offWhiteColor;
+      padding: 8px 10px;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      transition: $mainTransition;
+      &:focus, &:hover, &:visited, &:valid, &:active{
+        border-color: $mainColor;
+      }
+      &:after {
+        display: none;
+      }
+    }
+    .selectize-dropdown {
+      border: none;
+    }
+    .selectize-dropdown-content {
+      background-color: rgba($color: $blkColor, $alpha: 0.85);
+      color: $whtColor;
+      box-shadow: 0 3px 6px rgba($color: $blkColor, $alpha: 0.16) !important;
+      border: 1px solid $offWhiteColor;
+      max-height: 200px;
+      overflow-y: scroll;
+      width: 100%;
+      padding: 10px;
+      &::-webkit-scrollbar {
+        width: 5px;
+      }      
+      &::-webkit-scrollbar-track {
+        border-radius: 0;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $mainColor; 
+        border-radius: 0px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba($color: $mainColor, $alpha: .9); 
+      }
+      [data-selectable].option {
+        color: $offWhiteColor;
+        &:hover,
+        &.active {
+          background-color: $mainColor;
+          color: $whtColor;
+        }
+      }
+    }
+    .submit {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: $mainColor;
+      color: $whtColor;
+      right: 5px;
+      top: 5px;
+      transition: $mainTransition;
+      border: 1px solid transparent;
+      padding: 1px;
+      z-index: 9;
+      @media (max-width : 991px ) {
+        top: 3px;
+      }
+      &:hover {
+        background-color: transparent;
+        border: 1px solid $mainColor;
+      }
+    }
+  }
+}
+// ___________ Search Form ____________ //
+
+/* ====================================== _____________ Forms Styles _____________ ====================================== */

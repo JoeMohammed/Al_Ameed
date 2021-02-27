@@ -1,0 +1,101 @@
+/* ====================================== _____________ Mixin Styles _____________ ====================================== */
+//prefixer mixin //
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+// ____ Hover _____ //
+@mixin hoverLink {
+  position: relative;
+  padding-bottom: 2px;
+  transition: $mainTransition;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: $mainColor;
+    transition: $mainTransition;
+  }
+  &:hover {
+    color: $whtColor;
+    &::before {
+      width: 100%;
+    }
+  }
+}
+// ____ Hover _____ //
+
+//overlay mixin //
+@mixin overlay {
+  position: relative;
+  &::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $blkColor, $alpha: .5);
+    z-index: 1;
+  }
+}
+
+// animation mixin //
+@mixin animate($name, $duration, $iteration, $direction) {
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -o-animation-duration: $duration;
+  animation-duration: $duration;
+
+  -webkit-animation-iteration-count: $iteration;
+  -moz-animation-iteration-count: $iteration;
+  -o-animation-iteration-count: $iteration;
+  animation-iteration-count: $iteration;
+
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  -o-animation-name: $name;
+  animation-name: $name;
+
+  -webkit-animation-direction: $direction;
+  -moz-animation-direction: $direction;
+  -o-animation-direction: $direction;
+  animation-direction: $direction;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@include keyframes(inputHighlighter) {
+  from {
+    background: #fdfdfd;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@mixin inputHighlighter {
+  @include animate(inputHighlighter, 1s, 0.1s, ease);
+}
+
+/* ====================================== _____________ Mixin Styles _____________ ====================================== */

@@ -1,0 +1,158 @@
+/* ====================================== _____________ Header Styles _____________ ====================================== */
+header {
+  padding: 15px 0;
+  transition: $mainTransition;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  &.header_slide {
+    background-color: rgba($color: $blkColor, $alpha: 0.7);
+    .navbar_list {
+      border-bottom: 1px solid $offWhiteColor;
+      padding-bottom: 10px;
+    }
+  }
+  .navbar {
+    padding: 0;
+    flex-direction: column;
+    &_brand {
+      img {
+        width: 150px;
+        @media (max-width : 576px) {
+          width: 80px;
+        }
+      }
+    }
+    &_list {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      transition: $mainTransition;
+      &_item {
+        margin: 0 8px;
+        @media (max-width : 576px) {
+          margin: 0 3px;
+        }
+        &.search {
+          position: relative;
+          transition: $mainTransition;
+          i {
+            font-size: 1.1rem !important;
+          }
+          &.p_left {
+            padding-left: 200px;
+          }
+        }
+        &_link {
+          font-size: $paragraphFont;
+          color: $offWhiteColor;
+          @include hoverLink;
+          .country_lang & {
+            color: $whtColor;
+          }
+        }
+        &_text {
+          font-size: $paragraphFont;
+          text-transform: uppercase;
+          color: $offWhiteColor;
+          margin-right: 15px;
+          transition: $mainTransition;
+          @media (max-width : 576px){
+            margin-right: 5px;
+          }
+        }
+        &.dropdown {
+          position: relative;
+          &:hover{
+            .dropdown-menu{
+              display: block;
+            }
+          }
+          .dropdown-menu {
+            right: 0;
+            top: 99%;
+            left: auto;
+            min-width: 350px;
+            padding: 12px 18px;
+            background-color: rgba($color: $blkColor, $alpha: .9);
+            color: $whtColor;
+            transition: $slowTransition;
+            @media (max-width :  576px ) {
+              right: -50%;
+              transform: translateX(9%);
+            } 
+            .dropdown_content {
+              &_title {
+                font-size: $paragraphFont;
+                padding-bottom: 5px;
+                position: relative;
+                &::before {
+                  position: absolute;
+                  content: "";
+                  left: 0;
+                  bottom: 0;
+                  width: 15%;
+                  height: 1.5px;
+                  background-color: $mainColor;
+                  z-index: 1;
+                }
+              }
+              .dropdown-item {
+                padding: 0;
+                padding-bottom: 5px;
+                margin: 5px 0;
+                color: $whtColor;
+                transition: $mainTransition;
+                position: relative;
+                font-size: $paragraphFont;
+                &::before {
+                  position: absolute;
+                  content: "";
+                  left: 0;
+                  bottom: 0;
+                  width: 0;
+                  transition: $mainTransition;
+                  height: 1px;
+                  background-color: $mainColor;
+                }
+                &:hover {
+                  background-color: transparent;
+                  &::before {
+                    width: 50%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &_subnavbar {
+      margin-top: 10px;
+      padding: 15px 0;
+      display: none;
+      &_list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        &_item {
+          margin: 0 12px;
+          &_link {
+            color: $offWhiteColor;
+            font-size: $paragraphFont;
+            @include hoverLink;
+          }
+        }
+      }
+    }
+  }
+}
+/* ====================================== _____________ Header Styles _____________ ====================================== */

@@ -1,0 +1,37 @@
+/* ====================================== _____________ Reset Styles _____________ ====================================== */
+* {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+html{
+    font-size: 100%;
+    @media (max-width : 576px ) {
+        font-size: 85%;
+    }
+    @media (min-width : 576px) and (max-width : 767px ) {
+        font-size: 88%;
+    }
+    @media (min-width : 768px) and (max-width : 991px ) {
+        font-size: 90%;
+    }
+    @media (min-width : 992px ) and (max-width : 1199px) {
+        font-size: 95%;
+    }
+}
+
+body{
+    font-family: $mainFamilyFont;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+/* ====================================== _____________ Reset Styles _____________ ====================================== */
