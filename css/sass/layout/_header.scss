@@ -7,8 +7,16 @@ header {
   top: 0;
   width: 100%;
   z-index: 99;
+  &.scrolled{
+    padding: 8px 0;
+    background-color: $onBlkColor;
+    box-shadow: 0 3px 6px rgba($color: $blkColor, $alpha: .16) !important;
+  }
   &.header_slide {
     background-color: rgba($color: $blkColor, $alpha: 0.7);
+    &.scrolled{
+      background-color: $onBlkColor;
+    }
     .navbar_list {
       border-bottom: 1px solid $offWhiteColor;
       padding-bottom: 10px;

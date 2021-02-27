@@ -334,8 +334,16 @@ header {
   width: 100%;
   z-index: 99;
 }
+header.scrolled {
+  padding: 8px 0;
+  background-color: #111111;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16) !important;
+}
 header.header_slide {
   background-color: rgba(0, 0, 0, 0.7);
+}
+header.header_slide.scrolled {
+  background-color: #111111;
 }
 header.header_slide .navbar_list {
   border-bottom: 1px solid #a7a3a2;

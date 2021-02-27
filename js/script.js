@@ -1,6 +1,16 @@
 $(document).ready(function () {
   "use strict";
 
+  // _________ Scrollable Header
+  $(window).scroll(function() {
+    if($(window).scrollTop() > 1) {
+        $('header').addClass('scrolled');
+    }else{
+        $('header').removeClass('scrolled');
+    }
+  });
+  // _________ Scrollable Header
+
   // _________ SlideToggleButton
   $(".side_button").click(function (e) {
     e.preventDefault();
