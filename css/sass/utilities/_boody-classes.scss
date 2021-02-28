@@ -1,0 +1,32 @@
+// == Bg Color //
+.mainBg {
+    background-color: #dddddd;
+}
+.secBg {
+    background-color: white;
+}
+// == Bg Color //
+
+
+
+// == padding //
+.paddingSection {
+    padding: 4rem 0;
+}
+.innerPadding {
+    padding: 2.5rem 3.5rem;
+}
+
+@media (max-width: 568px) {
+    .innerPadding {
+        padding: 1.5rem 1.5rem;
+    }
+}
+// == padding //
+
+// == uppercase //
+.upper {
+    text-transform: uppercase;
+}
+// == uppercase //
+

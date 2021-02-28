@@ -1,20 +1,20 @@
 // utilities imports
 @import "utilities/variables", "utilities/functions", "utilities/mixins",
-  "utilities/classes";
+  "utilities/classes", "utilities/boody-classes";
 
 // base imports
 @import "base/reset", "base/typography", "base/global";
 
 // components imports
 @import "components/buttons", "components/carousel", "components/slider",
-  "components/burgerMenuButton";
+  "components/burgerMenuButton", "components/mainList", "components/popup_video", "components/video";
 
 // layout imports
 @import "layout/grid", "layout/header", "layout/footer", "layout/sidebar",
   "layout/forms";
 
 // pages imports
-@import "pages/home";
+@import "pages/home", "pages/search", "pages/branches", "pages/coffe_preparation.scss";
 
 // themes imports
 @import "themes/theme";

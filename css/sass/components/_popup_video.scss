@@ -1,0 +1,27 @@
+.modal_video.show .modal-dialog {
+    max-width: 80%;
+
+    .modal-content {
+        border: none;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+    }
+    button.close {
+        text-align: right;
+        padding: 10px 15px;
+        background-color: $mainColor;
+        opacity: 1;
+        span {
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .modal_video.show .modal-dialog {
+        margin: 0 auto;
+    }
+}

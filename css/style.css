@@ -66,6 +66,31 @@
 }
 
 /* ====================================== _____________ Classes Styles _____________ ====================================== */
+.mainBg {
+  background-color: #dddddd;
+}
+
+.secBg {
+  background-color: white;
+}
+
+.paddingSection {
+  padding: 4rem 0;
+}
+
+.innerPadding {
+  padding: 2.5rem 3.5rem;
+}
+
+@media (max-width: 568px) {
+  .innerPadding {
+    padding: 1.5rem 1.5rem;
+  }
+}
+.upper {
+  text-transform: uppercase;
+}
+
 /* ====================================== _____________ Reset Styles _____________ ====================================== */
 * {
   outline: 0 !important;
@@ -322,6 +347,120 @@ button {
 }
 
 /* ====================================== _____________ Side Button Burger Styles _____________ ====================================== */
+.main_list {
+  margin-top: 2rem;
+}
+.main_list h5 {
+  padding-bottom: 0.5rem;
+}
+.main_list ul li a span {
+  color: grey;
+  position: relative;
+}
+.main_list ul li:nth-child(2) {
+  padding-bottom: 10px;
+}
+.main_list ul li:last-child a span::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: grey;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.main_list ul li:last-child a span:hover::before {
+  width: 0;
+}
+
+@media (max-width: 768px) {
+  .main_list h5 {
+    margin-bottom: 1rem;
+  }
+}
+.modal_video.show .modal-dialog {
+  max-width: 80%;
+}
+.modal_video.show .modal-dialog .modal-content {
+  border: none;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.modal_video.show .modal-dialog button.close {
+  text-align: right;
+  padding: 10px 15px;
+  background-color: #e51937;
+  opacity: 1;
+}
+.modal_video.show .modal-dialog button.close span {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .modal_video.show .modal-dialog {
+    margin: 0 auto;
+  }
+}
+.video {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.video img {
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.video .icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.video .icon i {
+  color: #fff;
+  background-color: #e51937;
+  padding: 25px;
+  border-radius: 50%;
+  font-size: 20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.video:hover img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+@media (max-width: 991px) {
+  .video_content {
+    padding-top: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .video i {
+    padding: 20px !important;
+    font-size: 10px !important;
+  }
+}
 /* ====================================== _____________ Grids Styles _____________ ====================================== */
 /* ====================================== _____________ Grids Styles _____________ ====================================== */
 /* ====================================== _____________ Header Styles _____________ ====================================== */
@@ -857,6 +996,92 @@ footer .copyright p {
 }
 
 /* ====================================== _____________ Home Page Styles _____________ ====================================== */
+.result h3 {
+  border-bottom: 1px solid #d6d6d6;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+}
+.result ul {
+  margin-bottom: 0;
+}
+.result ul li {
+  margin: 1.5rem 0;
+}
+.result ul li h5 {
+  font-weight: bold;
+  margin-bottom: 0 !important;
+}
+.result ul li p {
+  margin-bottom: 0;
+}
+.result ul li a {
+  position: relative;
+}
+.result ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1%;
+  background-color: #e51937;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.result ul li a:hover {
+  color: #e51937;
+}
+.result ul li a:hover::before {
+  width: 0;
+}
+.result ul li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1200px) {
+  .result h5 {
+    font-size: 1rem;
+  }
+
+  .result p {
+    font-size: 0.8rem;
+    margin: 0.8rem 0 !important;
+  }
+}
+@media (max-width: 991px) {
+  .result p {
+    margin: 0.6rem 0 !important;
+  }
+}
+@media (max-width: 768px) {
+  .result h3 {
+    font-size: 1rem;
+  }
+
+  .result .media {
+    display: block;
+  }
+  .result .media img {
+    width: 100%;
+  }
+  .result .media .media-body {
+    padding: 0.8rem 0;
+  }
+  .result .media .media-body p {
+    margin: 0.5rem 0 !important;
+  }
+}
+.branches .branch2 {
+  margin-top: 4rem;
+}
+
+@media (min-width: 1200px) {
+  .coffe_preparation .container {
+    max-width: 85%;
+  }
+}
 /* ====================================== _____________ Theme Styles _____________ ====================================== */
 /* ====================================== _____________ Theme Styles _____________ ====================================== */
 
