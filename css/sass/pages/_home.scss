@@ -6,8 +6,106 @@
     background-size: cover;
     height: 100vh;
     width: 100%;
-    // background-attachment: fixed;
+    background-attachment: fixed;
+    position: relative;
     @include overlay;
+    &_content{
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 80%;
+      margin: auto;
+      position: relative;
+      z-index: 3;
+      @media (max-width : 911px ) {
+        width: 100%;
+      }
+      &_title{
+        text-transform: uppercase;
+        font-size: $bigHeadFont;
+        font-weight: 400;
+        color: $whtColor;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-bottom: 3px solid $mainColor;
+      }
+      &_description{
+        font-size: $hugeFont;
+        font-weight: 300;
+        margin-bottom: 0;
+        color: $whtColor;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+    &_discoverBuy{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      padding: 20px 0;
+      background-color: rgba($color: $blkColor, $alpha: .5);
+      z-index: 4;
+      transition: $mainTransition;
+      &_title{
+        font-size: $headFont;
+        font-weight: 300;
+        color: $offWhiteColor;
+        margin-bottom: 0;
+        padding-bottom: 5px;
+        position: relative;
+        transition: $mainTransition;
+        cursor: pointer;
+        &::before{
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: 0;
+          width: 0;
+          height: 1.5px;
+          background-color: $mainColor;
+          transition: $mainTransition;
+        }
+        &.active{
+          margin-bottom: 20px;
+          &::before{
+            width: 120px;
+          }
+        }
+        &:hover{
+          &::before{
+            width: 120px;
+          }
+        }
+      }
+      &_list{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        display: none;
+        transition: $mainTransition;
+        &_item{
+          margin: 0 15px;
+          &:first-of-type{
+            margin-left: 0;
+          }
+          &_link{
+            color: $offWhiteColor;
+            font-size: $mainFont;
+            @include hoverLink;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
   }
 }
 /* ====================================== _____________ Home Page Styles _____________ ====================================== */

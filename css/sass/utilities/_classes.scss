@@ -15,12 +15,54 @@
 }
 // == Container //
 
-// == Hover Link //
+// == Titles & Test //
+.mainTitle{
+    font-size: $hugeFont;
+    text-transform: uppercase;
+    color: $blkColor;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.title{
+    font-size: $bigHeadFont;
+    margin-bottom: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    &.hr{
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba($color: $blkColor, $alpha: .35);
+    }
+}
+.subTitle{
+    font-size: $bigFont;
+    margin-bottom: 10px;
+    color: $blkColor;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
-// == Hover Link //
+p, .p{
+    font-size: $mainFont;
+    font-weight: 300;
+    color: $blkColor;
+    margin-bottom: 15px;
+}
+
+.sm_link{
+    font-size: $paragraphFont;
+    text-decoration: underline;
+    transition: $mainTransition;
+    @include hoverLink;
+    &:hover{
+        text-decoration: none;
+        color: $mainColor;
+    }
+}
+// == Titles & Test //
 
 // == Color //
 .mainColor{color: $mainColor;}
+.blkColor{color: $blkColor;}
 // == Color //
 
 // == Bg Color //

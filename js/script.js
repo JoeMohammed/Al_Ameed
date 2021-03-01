@@ -47,6 +47,22 @@ $(document).ready(function () {
   });
   // _________ Selectize Select Branches
 
+  // _________ Discover Buy Banner
+  $('.homePage .banner_discoverBuy_title').click(function(e) {
+    $('.homePage .banner_discoverBuy_title').removeClass('active');
+    $(this).addClass('active');
+    $('.banner_discoverBuy_list').slideUp(300);
+    $(this).siblings('.banner_discoverBuy_list').slideDown(300).css('display', 'flex');
+  });
+  $('.homePage .banner_discoverBuy').click(function (e) {
+    e.stopPropagation();
+  });
+  $(window).click(function() {
+    $('.homePage .banner_discoverBuy_title').removeClass('active');
+    $('.banner_discoverBuy_list').slideUp(300);
+  });
+  // _________ Discover Buy Banner
+
   // start animation
   if ($(window).width() >= 991) {
     // Helper function for add element box list in WOW
