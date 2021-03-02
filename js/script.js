@@ -2,11 +2,11 @@ $(document).ready(function () {
   "use strict";
 
   // _________ Scrollable Header
-  $(window).scroll(function() {
-    if($(window).scrollTop() > 1) {
-        $('header').addClass('scrolled');
-    }else{
-        $('header').removeClass('scrolled');
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 1) {
+      $("header").addClass("scrolled");
+    } else {
+      $("header").removeClass("scrolled");
     }
   });
   // _________ Scrollable Header
@@ -48,20 +48,48 @@ $(document).ready(function () {
   // _________ Selectize Select Branches
 
   // _________ Discover Buy Banner
-  $('.homePage .banner_discoverBuy_title').click(function(e) {
-    $('.homePage .banner_discoverBuy_title').removeClass('active');
-    $(this).addClass('active');
-    $('.banner_discoverBuy_list').slideUp(300);
-    $(this).siblings('.banner_discoverBuy_list').slideDown(300).css('display', 'flex');
+  $(".homePage .banner_discoverBuy_title").click(function (e) {
+    $(".homePage .banner_discoverBuy_title").removeClass("active");
+    $(this).addClass("active");
+    $(".banner_discoverBuy_list").slideUp(300);
+    $(this)
+      .siblings(".banner_discoverBuy_list")
+      .slideDown(300)
+      .css("display", "flex");
   });
-  $('.homePage .banner_discoverBuy').click(function (e) {
+  $(".homePage .banner_discoverBuy").click(function (e) {
     e.stopPropagation();
   });
-  $(window).click(function() {
-    $('.homePage .banner_discoverBuy_title').removeClass('active');
-    $('.banner_discoverBuy_list').slideUp(300);
+  $(window).click(function () {
+    $(".homePage .banner_discoverBuy_title").removeClass("active");
+    $(".banner_discoverBuy_list").slideUp(300);
   });
   // _________ Discover Buy Banner
+
+  // _________ Products & Solutions Swiper
+  var productsSolutionsSwiper = new Swiper(".swiper-container.products_solutions_swiper", {
+    direction: "vertical",
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    centeredSlides: true,
+    slidesPerView: 5,
+    spaceBetween: 10,
+    loop: true,
+    slideToClickedSlide: true,
+  });
+  $('.products_solutions_swiper_slide_link').click(function (e) {
+    e.preventDefault();
+  });
+  productsSolutionsSwiper.on('slideChange', function () {
+    $('.products_solutions_content').fadeOut(300).removeClass('active');
+    $('.swiper-slide-active').addClass('act');
+  });
+  productsSolutionsSwiper.on('slideChangeTransitionEnd', function () {
+    $($('.swiper-slide-active').data('coffe')).fadeIn(300).addClass('active');
+  });
+  // _________ Products & Solutions Swiper
 
   // start animation
   if ($(window).width() >= 991) {

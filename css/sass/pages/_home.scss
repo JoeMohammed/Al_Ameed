@@ -1,5 +1,6 @@
 /* ====================================== _____________ Home Page Styles _____________ ====================================== */
 .homePage {
+  // __________________________________________________________ Banner Section __________________________________________________________ //
   .banner {
     background-image: url(../img/homePage/bg.jpg);
     background-position: center;
@@ -9,7 +10,7 @@
     background-attachment: fixed;
     position: relative;
     @include overlay;
-    &_content{
+    &_content {
       height: 100%;
       display: flex;
       justify-content: center;
@@ -19,10 +20,10 @@
       margin: auto;
       position: relative;
       z-index: 3;
-      @media (max-width : 911px ) {
+      @media (max-width: 911px) {
         width: 100%;
       }
-      &_title{
+      &_title {
         text-transform: uppercase;
         font-size: $bigHeadFont;
         font-weight: 400;
@@ -33,7 +34,7 @@
         padding-right: 5px;
         border-bottom: 3px solid $mainColor;
       }
-      &_description{
+      &_description {
         font-size: $hugeFont;
         font-weight: 300;
         margin-bottom: 0;
@@ -42,17 +43,17 @@
         text-align: center;
       }
     }
-    &_discoverBuy{
+    &_discoverBuy {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
       height: auto;
       padding: 20px 0;
-      background-color: rgba($color: $blkColor, $alpha: .5);
+      background-color: rgba($color: $blkColor, $alpha: 0.5);
       z-index: 4;
       transition: $mainTransition;
-      &_title{
+      &_title {
         font-size: $headFont;
         font-weight: 300;
         color: $offWhiteColor;
@@ -61,7 +62,7 @@
         position: relative;
         transition: $mainTransition;
         cursor: pointer;
-        &::before{
+        &::before {
           position: absolute;
           content: "";
           left: 0;
@@ -71,19 +72,19 @@
           background-color: $mainColor;
           transition: $mainTransition;
         }
-        &.active{
+        &.active {
           margin-bottom: 20px;
-          &::before{
+          &::before {
             width: 120px;
           }
         }
-        &:hover{
-          &::before{
+        &:hover {
+          &::before {
             width: 120px;
           }
         }
       }
-      &_list{
+      &_list {
         padding: 0;
         margin: 0;
         display: flex;
@@ -92,12 +93,12 @@
         flex-wrap: wrap;
         display: none;
         transition: $mainTransition;
-        &_item{
+        &_item {
           margin: 0 15px;
-          &:first-of-type{
+          &:first-of-type {
             margin-left: 0;
           }
-          &_link{
+          &_link {
             color: $offWhiteColor;
             font-size: $mainFont;
             @include hoverLink;
@@ -107,5 +108,206 @@
       }
     }
   }
+  // __________________________________________________________ Banner Section __________________________________________________________ //
+
+  // __________________________________________________________ Coffe Section __________________________________________________________ //
+  .coffee {
+    padding: 30px 0;
+    &_card {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      &_body {
+        padding: 15px 0;
+        &_title {
+          margin-bottom: 10px;
+          font-size: $headFont;
+        }
+        &_text {
+          margin-bottom: 10px 0;
+          line-height: 1.3;
+        }
+      }
+    }
+  }
+  // __________________________________________________________ Coffe Section __________________________________________________________ //
+
+  // __________________________________________________________ Products & Solutions Section __________________________________________________________ //
+  .products_solutions {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 60%;
+      height: 100%;
+      background-color: $grayColor;
+      z-index: -1;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 0;
+      width: 40%;
+      height: 100%;
+      background-color: $blkColor2;
+      z-index: -1;
+    }
+    &_title {
+      font-size: $bannerFont;
+      span {
+        font-size: $bigHeadFont;
+      }
+    }
+    &_text {
+      margin-bottom: 200px;
+    }
+    &_content{
+      display: none;
+      &.active{
+        display: block;
+      }
+    }
+    .content {
+      .img {
+        position: absolute;
+        right: -12%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 30;
+        img {
+          filter: drop-shadow(
+            0 15px 20px rgba($color: $blkColor, $alpha: 0.16)
+          );
+        }
+      }
+    }
+    &_nav {
+      padding: 15px 0;
+      &_list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        &_item {
+          margin: 0 15px;
+          &_link {
+            color: $offWhiteColor;
+            font-size: $bigFont;
+            font-weight: 500;
+            text-transform: uppercase;
+            @include hoverLink;
+            &.active {
+              color: $whtColor;
+            }
+          }
+        }
+      }
+    }
+    .slider {
+      height: 500px;
+      padding: 100px 65px;
+      position: relative;
+    }
+    &_swiper {
+      height: 160px;
+      position: relative;
+      z-index: 8;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      text-align: left;
+      &::before , &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        width: 100%;
+        height: 26%;
+        background: rgb(24,24,24);
+        z-index: 2;
+      }
+      &::before{
+        top: 0;
+        background: linear-gradient(180deg, rgba(24,24,24,1) 0%, rgba(24,24,24,0) 100%);
+      }
+      &::after {
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(24,24,24,0) 0%, rgba(24,24,24,1) 100%);
+      }
+      &_slide {
+        width: 75%;
+        margin-left: auto;
+        &.swiper-slide-active {
+          .products_solutions_swiper_slide_link {
+            p {
+              color: $whtColor;
+              &::before {
+                opacity: 0;
+              }
+              &::after {
+                opacity: 1;
+              }
+            }
+          }
+        }
+        p {
+          font-size: $paragraphFont;
+          padding-left: 15px;
+          position: relative;
+          margin-bottom: 0;
+          &::before,
+          &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-image: url(../img/homePage/bean.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0;
+            transition: $mainTransition;
+          }
+          &::before {
+            opacity: 1;
+            // filter: blur(3px);
+            filter: grayscale(1);
+            // filter: saturate(2.2);
+          }
+        }
+      }
+    }
+    .swiper-button-next, .swiper-button-prev{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $mainColor;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $whtColor;
+      top: auto;
+      margin-top: 0;
+      bottom: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  .swiper-button-prev{
+    left: auto;
+    right: 65px
+  }
+  // __________________________________________________________ Products & Solutions Section __________________________________________________________ //
 }
 /* ====================================== _____________ Home Page Styles _____________ ====================================== */

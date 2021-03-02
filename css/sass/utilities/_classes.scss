@@ -1,72 +1,161 @@
 /* ====================================== _____________ Classes Styles _____________ ====================================== */
 // == Container //
-.container_manual{
-    width: 95%;
-    margin: auto;
-    padding: 0 015px;
-    .navbar & {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    @media (max-width : 576px) {
-        width: 100%;
-    }
+.container_manual {
+  width: 95%;
+  margin: auto;
+  padding: 0 015px;
+  .navbar & {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 576px) {
+    width: 100%;
+  }
 }
 // == Container //
 
-// == Titles & Test //
-.mainTitle{
-    font-size: $hugeFont;
-    text-transform: uppercase;
-    color: $blkColor;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-.title{
-    font-size: $bigHeadFont;
-    margin-bottom: 15px;
-    font-weight: 400;
-    text-transform: uppercase;
-    &.hr{
-        padding-bottom: 15px;
-        border-bottom: 1px solid rgba($color: $blkColor, $alpha: .35);
+// == Section //
+section {
+  &:not(.banner) {
+    padding: 50px 0;
+    @media (max-width: 767px) {
+      padding: 25px 0;
     }
+  }
 }
-.subTitle{
-    font-size: $bigFont;
-    margin-bottom: 10px;
-    color: $blkColor;
-    font-weight: bold;
-    text-transform: uppercase;
+// == Section //
+
+// == Titles & Test //
+.mainTitle {
+  font-size: $hugeFont;
+  text-transform: uppercase;
+  color: $blkColor;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.title {
+  font-size: $bigHeadFont;
+  margin-bottom: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  &.hr {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba($color: $blkColor, $alpha: 0.35);
+  }
+}
+.subTitle {
+  font-size: $bigFont;
+  margin-bottom: 10px;
+  color: $blkColor;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-p, .p{
-    font-size: $mainFont;
-    font-weight: 300;
-    color: $blkColor;
-    margin-bottom: 15px;
+p,
+.p {
+  font-size: $mainFont;
+  font-weight: 300;
+  color: $textColor;
+  margin-bottom: 15px;
 }
 
-.sm_link{
-    font-size: $paragraphFont;
-    text-decoration: underline;
+.sm_link {
+  font-size: $paragraphFont;
+  text-decoration: underline;
+  transition: $mainTransition;
+  @include hoverLink;
+  &:hover {
+    text-decoration: none;
+    color: $mainColor;
+  }
+}
+
+.arrow_link {
+  display: inline-flex;
+  align-items: center;
+  transition: $mainTransition;
+  .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: $mainColor;
+    color: $whtColor;
     transition: $mainTransition;
-    @include hoverLink;
-    &:hover{
-        text-decoration: none;
-        color: $mainColor;
+    border: 1px solid transparent;
+  }
+  .text {
+    color: $textColor;
+    transition: $mainTransition;
+  }
+  &:hover {
+    padding-left: 5px;
+    .arrow {
+      background-color: $blkColor;
+      border-color: $mainColor;
+      transform: scale(1.1);
     }
+    .text {
+      color: $mainColor;
+      padding-left: 15px;
+    }
+  }
 }
 // == Titles & Test //
 
+// == Fonts weight //
+.font_light {
+  font-weight: 300;
+}
+.font_regular {
+  font-weight: 400;
+}
+.font_semi_bold {
+  font-weight: 500;
+}
+.font_bold {
+  font-weight: 800;
+}
+// == Fonts weight //
+
 // == Color //
-.mainColor{color: $mainColor;}
-.blkColor{color: $blkColor;}
+.mainColor {
+  color: $mainColor;
+}
+.blkColor {
+  color: $blkColor;
+}
+.textColor {
+  color: $textColor;
+}
 // == Color //
 
 // == Bg Color //
-.mainBgColor{background-color: $mainColor;}
+.mainBgColor {
+  background-color: $mainColor;
+}
 // == Bg Color //
+
+// == Width //
+.w_70 {
+  width: 70%;
+}
+// == Width //
+
+// == ZoomIn //
+.zoomin {
+  position: relative;
+  overflow: hidden;
+  img {
+    transition: $slowTransition;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+// == ZoomIn //
 /* ====================================== _____________ Classes Styles _____________ ====================================== */
-
