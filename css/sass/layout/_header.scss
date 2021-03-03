@@ -43,6 +43,7 @@ header {
       transition: $mainTransition;
       &_item {
         margin: 0 8px;
+        overflow: hidden;
         @media (max-width : 576px) {
           margin: 0 3px;
         }

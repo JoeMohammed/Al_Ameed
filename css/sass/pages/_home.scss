@@ -135,6 +135,10 @@
   // __________________________________________________________ Products & Solutions Section __________________________________________________________ //
   .products_solutions {
     position: relative;
+    @media (max-width: 991px) {
+      min-height: 150vh;
+      min-height: 1170px;
+    }
     &::before {
       position: absolute;
       content: "";
@@ -144,6 +148,11 @@
       height: 100%;
       background-color: $grayColor;
       z-index: -1;
+      @media (max-width: 991px) {
+        width: 100%;
+        height: 40%;
+        background-color: $blkColor2;
+      }
     }
     &::after {
       position: absolute;
@@ -154,6 +163,26 @@
       height: 100%;
       background-color: $blkColor2;
       z-index: -1;
+      @media (max-width: 991px) {
+        width: 100%;
+        height: 60%;
+        top: auto;
+        bottom: 0;
+        background-color: $grayColor;
+      }
+    }
+    .xs-gray {
+      @media (max-width: 991px) {
+        // background-color: $grayColor;
+        order: 2;
+        padding-top: 50px;
+      }
+    }
+    .xs-black {
+      @media (max-width: 991px) {
+        // background-color: $blkColor2;
+        order: 1;
+      }
     }
     &_title {
       font-size: $bannerFont;
@@ -163,10 +192,16 @@
     }
     &_text {
       margin-bottom: 200px;
+      @media (max-width: 991px) {
+        margin-bottom: 20px;
+      }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        max-width: 55%;
+      }
     }
-    &_content{
+    &_content {
       display: none;
-      &.active{
+      &.active {
         display: block;
       }
     }
@@ -177,7 +212,16 @@
         top: 50%;
         transform: translateY(-50%);
         z-index: 30;
+        @media (max-width: 991px) {
+          position: static;
+          text-align: center;
+          transform: translateY(0);
+          margin: 15px 0;
+        }
         img {
+          @media (min-width: 992px) and (max-width: 1199px) {
+            max-width: 250px;
+          }
           filter: drop-shadow(
             0 15px 20px rgba($color: $blkColor, $alpha: 0.16)
           );
@@ -208,10 +252,25 @@
         }
       }
     }
+    .navigation_content {
+      &:not(.active) {
+        display: none;
+      }
+    }
     .slider {
       height: 500px;
       padding: 100px 65px;
       position: relative;
+      @media (max-width: 991px) {
+        padding: 50px 65px;
+        height: 350px;
+      }
+      @media (max-width: 576px) {
+        padding: 50px 35px;
+      }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        padding: 100px 30px 100px 65px;
+      }
     }
     &_swiper {
       height: 160px;
@@ -223,26 +282,45 @@
       align-items: center;
       flex-wrap: wrap;
       text-align: left;
-      &::before , &::after {
+      &::before,
+      &::after {
         position: absolute;
         content: "";
         left: 0;
         width: 100%;
         height: 26%;
-        background: rgb(24,24,24);
+        background: rgb(24, 24, 24);
         z-index: 2;
       }
-      &::before{
+      &::before {
         top: 0;
-        background: linear-gradient(180deg, rgba(24,24,24,1) 0%, rgba(24,24,24,0) 100%);
+        background: linear-gradient(
+          180deg,
+          rgba(24, 24, 24, 1) 0%,
+          rgba(24, 24, 24, 0) 100%
+        );
       }
       &::after {
         bottom: 0;
-        background: linear-gradient(180deg, rgba(24,24,24,0) 0%, rgba(24,24,24,1) 100%);
+        background: linear-gradient(
+          180deg,
+          rgba(24, 24, 24, 0) 0%,
+          rgba(24, 24, 24, 1) 100%
+        );
       }
       &_slide {
         width: 75%;
         margin-left: auto;
+        @media (max-width: 576px) {
+          width: 100%;
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+          width: 50%;
+          margin: auto;
+        }
+        @media (min-width: 992px) and (max-width: 1199px) {
+          width: 100%;
+        }
         &.swiper-slide-active {
           .products_solutions_swiper_slide_link {
             p {
@@ -287,7 +365,8 @@
         }
       }
     }
-    .swiper-button-next, .swiper-button-prev{
+    .swiper-button-next,
+    .swiper-button-prev {
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -299,15 +378,207 @@
       top: auto;
       margin-top: 0;
       bottom: 0;
-      &::after{
+      // @media (max-width :)
+      &::after {
         display: none;
       }
     }
   }
-  .swiper-button-prev{
+  .swiper-button-prev {
     left: auto;
-    right: 65px
+    right: 65px;
   }
   // __________________________________________________________ Products & Solutions Section __________________________________________________________ //
+
+  // __________________________________________________________ Map Section __________________________________________________________ //
+  .map {
+    position: relative;
+    @media (max-width: 576px) {
+      padding-top: 50px;
+    }
+    &_nav {
+      padding: 25px 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      &_list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        &_item {
+          margin: 0 20px;
+          position: relative;
+          transition: $mainTransition;
+          overflow: hidden;
+          &.p_left {
+            padding-left: 200px;
+          }
+          &_link {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            color: $offWhiteColor;
+            transition: $mainTransition;
+            span {
+              font-size: $paragraphFont;
+              margin-right: 15px;
+            }
+            &.map_search {
+              position: relative;
+              transition: $mainTransition;
+              span {
+                color: $mainColor;
+                transition: $mainTransition;
+              }
+              i {
+                transition: $mainTransition;
+              }
+            }
+          }
+        }
+      }
+    }
+    &_destribution {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $offWhiteColor;
+      left: 25%;
+      width: 20%;
+      @media (max-width: 767px) {
+        position: static;
+        top: auto;
+        bottom: 0;
+        transform: translateY(0);
+        padding: 30px 15px;
+        width: 100%;
+        left: 0;
+      }
+      &_title {
+        text-transform: uppercase;
+      }
+      &_text {
+        color: $offWhiteColor;
+      }
+    }
+  }
+  // __________________________________________________________ Map Section __________________________________________________________ //
+
+  // __________________________________________________________ Latest News Section __________________________________________________________ //
+  .latest_news {
+    padding: 40px 0;
+    &_card {
+      position: relative;
+      overflow: hidden;
+      &_header {
+        overflow: hidden;
+        overflow-x: hidden !important;
+        @media (max-width: 767px) {
+          margin-bottom: 1rem;
+        }
+        img {
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+  // __________________________________________________________ Latest News Section __________________________________________________________ //
+
+  // __________________________________________________________ Testimonials Section __________________________________________________________ //
+  .testimonials {
+    &_swiper {
+      padding: 40px 0;
+      &_slide {
+        transition: $mainTransition;
+        &_card {
+          box-shadow: 0 3px 6px rgba($color: $blkColor, $alpha: 0.16) !important;
+          background-color: $whtColor;
+          padding: 25px 40px;
+          border-radius: 4px;
+          transition: $mainTransition;
+          .chat_icon {
+            i {
+              color: $mainColor;
+              transition: $mainTransition;
+            }
+          }
+          .smTitle {
+            color: #424242;
+            transition: $mainTransition;
+          }
+        }
+        &.swiper-slide-active {
+          .testimonials_swiper_slide_card {
+            background-color: $mainColor;
+            box-shadow: none !important;
+            .chat_icon {
+              i {
+                color: $whtColor;
+              }
+            }
+            .smTitle {
+              color: $whtColor;
+            }
+            p,
+            .p {
+              color: $whtColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  .swiper-container-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    border: 2px solid $mainColor;
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $mainColor !important;
+  }
+  // __________________________________________________________ Testimonials Section __________________________________________________________ //
+
+  // __________________________________________________________ Preparation Section __________________________________________________________ //
+  .preparation{
+    background-image: url(../img/homePage/preparation-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 150px 0;
+    @media(max-width : 991px ) {
+      padding: 50px 0;
+    }
+    .play_icon{
+      width : 75px;
+      height: 75px;
+      border-radius: 50%;
+      background-color: $mainColor;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $whtColor;
+      text-transform: uppercase;
+      margin: auto; 
+      border: 1px solid transparent;
+      transition: $mainTransition;
+      &:hover{
+        background-color: transparent;
+        border-color: $mainColor;
+      }
+    }
+  }
+  // __________________________________________________________ Preparation Section __________________________________________________________ //
 }
 /* ====================================== _____________ Home Page Styles _____________ ====================================== */
