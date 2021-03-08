@@ -7,14 +7,14 @@
 
 // components imports
 @import "components/buttons", "components/carousel", "components/slider",
-  "components/burgerMenuButton", "components/mainList", "components/popup_video", "components/video";
+  "components/burgerMenuButton", "components/mainList", "components/popup_video", "components/video", 'components/card', 'components/popup';
 
 // layout imports
 @import "layout/grid", "layout/header", "layout/footer", "layout/sidebar",
   "layout/forms";
 
 // pages imports
-@import "pages/home", "pages/search", "pages/branches", "pages/coffe_preparation.scss";
+@import "pages/home", "pages/search", "pages/branches", "pages/coffe_preparation.scss", 'pages/news', 'pages/gallery';
 
 // themes imports
 @import "themes/theme";

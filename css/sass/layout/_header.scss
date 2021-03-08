@@ -43,11 +43,13 @@ header {
       transition: $mainTransition;
       &_item {
         margin: 0 8px;
+        
         @media (max-width : 576px) {
           margin: 0 3px;
         }
         &.search {
           position: relative;
+          overflow: hidden;
           transition: $mainTransition;
           i {
             font-size: 1.1rem !important;
@@ -83,7 +85,7 @@ header {
           }
           .dropdown-menu {
             right: 0;
-            top: 99%;
+            top: 90%;
             left: auto;
             min-width: 350px;
             padding: 12px 18px;

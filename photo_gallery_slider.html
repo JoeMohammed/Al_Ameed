@@ -20,7 +20,7 @@
     <!-- upper bar color for mobile -->
     <meta content="#627E90" name="theme-color" />
     <!-- Page Title -->
-    <title>Al-Ameed &nbsp; | &nbsp; Coffee Preparations</title>
+    <title>Al-Ameed &nbsp; | &nbsp; Photo Gallery</title>
     <!-- Favicon-->
     <link rel="shortcut icon" type="image/x-icon" href="img/global/loco.ico" />
     <!-- Bootstrap v4 -->
@@ -45,7 +45,7 @@
     <script src="js/modernizr-2.6.2.min.js"></script>
   </head>
 
-  <body class="homePage">
+  <body class="photoGalleryPage">
     <!-- ==================== Header ==================== -->
     <header>
       <!-- ________________ Start Navbar ________________ -->
@@ -96,7 +96,9 @@
               </a>
             </li>
 
-            <li class="navbar_list_item dropdown country_lang mr-1 mr-sm-3 mr-md-5">
+            <li
+              class="navbar_list_item dropdown country_lang mr-1 mr-sm-3 mr-md-5"
+            >
               <a
                 class="navbar_list_item_link dropdown-toggle"
                 href="#"
@@ -167,84 +169,85 @@
 
     <!-- ==================== Main ==================== -->
     <main>
-    <!-- ________________ Start Banner Section ________________ -->
-    <section class="banner coffee_preparation_banner internal">
-      <!-- Container -->
-      <div class="banner_bar">
-        <div class="container h-100">
-          <div class="row align-items-center">
-            <div class="col-sm-9 col-6">
-              <h5 class="banner_bar_title">
-                coffee Preparations
-              </h5>
-            </div>
-            <div class="col-sm-3 col-6 text-right">
-              <a href="#" class="banner_bar_share">
-                Share
-                <i class="fa fa-share-alt " aria-hidden="true"></i>
-              </a>
+      <!-- ________________ Start Banner Section ________________ -->
+      <section class="banner photo_gallery internal">
+        <!-- Container -->
+        <div class="banner_bar">
+          <div class="container h-100">
+            <div class="row align-items-center">
+              <div class="col-sm-9 col-6">
+                <h5
+                  class="banner_bar_title wow fadeInLeft"
+                  data-wow-duration="1s"
+                  data-wow-delay=".1s"
+                >
+                  Photo Gallery
+                </h5>
+              </div>
+              <div
+                class="col-sm-3 col-6 text-right wow fadeInRight"
+                data-wow-duration="1s"
+                data-wow-delay=".3s"
+              >
+                <a href="#" class="banner_bar_share">
+                  Share
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- Container -->
-    </section>
-    <!-- ________________ End Banner Section ________________ -->
+        <!-- Container -->
+      </section>
+      <!-- ________________ End Banner Section ________________ -->
 
-        <!-- ________________ start popup Section ________________ -->
+      <!-- ________________ Start Gallery Section ________________ -->
+      <section>
+        <div class="container_manual">
+          <h3 class="title blkColor text-center font_bold">Branches</h3>
 
-        <!-- Modal -->
-        <div class="modal modal_video fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <video controls>
-
-                    <source src="/media/cc0-videos/flower.webm"
-                            type="video/webm">
-                
-                    <source src="/media/cc0-videos/flower.mp4"
-                            type="video/mp4">
-                
-                    Sorry, your browser doesn't support embedded videos.
-                </video>
-              </div>
+          <!-- Swiper -->
+          <div class="swiper-container gallery_swiper" style="height: 500px">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide"
+                style="background-image: url(img/photo_gallery/gallery1.jpg)"
+              ></div>
+              <div
+                class="swiper-slide"
+                style="background-image: url(img/photo_gallery/gallery2.jpg)"
+              ></div>
+              <div
+                class="swiper-slide"
+                style="background-image: url(img/photo_gallery/gallery3.jpg)"
+              ></div>
+              <div
+                class="swiper-slide"
+                style="background-image: url(img/photo_gallery/gallery4.jpg)"
+              ></div>
+              <div
+                class="swiper-slide"
+                style="background-image: url(img/photo_gallery/gallery5.jpg)"
+              ></div>
+              <div
+                class="swiper-slide"
+                style="background-image: url(img/photo_gallery/gallery6.jpg)"
+              ></div>
+              <div
+                class="swiper-slide"
+                style="background-image: url(img/photo_gallery/gallery7.jpg)"
+              ></div>
+              <div
+                class="swiper-slide"
+                style="background-image: url(img/photo_gallery/gallery8.jpg)"
+              ></div>
             </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
-        <!-- ________________ End popup Section ________________ -->
-
-        <!-- ________________ Start coffe_preparation Section ________________ -->
-        <section class="coffee_preparation mainBg paddingSection">
-            <!-- Container -->
-            <div class="container">
-
-                <!-- coffe_preparation -->
-                <div class="row">
-                    <div class="col-lg-8 wow fadeInLeft">
-                        <div class="video_coffee" data-toggle="modal" data-target="#exampleModalCenter">
-                            <img src="img/coffePereparation/Untitled-1.jpg" class="img-fluid" alt="">
-                            <div class="icon hvr-grow">
-                                <i class="fa fa-play"></i>
-                            </div>
-                        </div>
-                    </div>
- 
-                    <div class="col-lg-4  wow fadeInRight" data-wow-delay="0.1s">
-                        <div class="video_content">
-                            <span class="mainColor upper mt-2">12 feb 2019</span>
-                            <h5 class="upper mb-3 mt-3">we spent those early years pouring all our passion and energy our passion and energy</h5>
-                            <p>A Journey of Passion, Excellence, and Great Coffee. At Al-Ameed Coffee, it is not just about a cup of coffee.</p>
-                            <p>It’s about experiencing the craft and passion behind the making of every cup. We roast, grind, and compare.</p>
-                            <p>We sip, taste, and repeat. All so we can offer you the best-tasting cup possible, every time. The story of Al-Ameed Coffee begins in 1973, when we decided to turn our passion and respect for coffee into a business, with the opening of a small coffee-roasting store.</p>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-            <!-- Container -->
-        </section>
-        <!-- ________________ End branches Section ________________ -->
+      </section>
+      <!-- ________________ End Gallery Section ________________ -->
     </main>
     <!-- ==================== Main ==================== -->
 

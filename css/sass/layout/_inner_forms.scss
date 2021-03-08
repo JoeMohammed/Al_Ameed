@@ -1,0 +1,106 @@
+.cust_form {
+    .cust_col {
+        margin-bottom: 20px;
+        .form-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+            .form-control {
+                color: #5E5E5E;
+                font-size: .9rem;
+                padding: 1.2rem 1rem;
+                outline: 0;
+                background-clip: inherit;
+                box-shadow: none !important;
+                transition: all .3s ease-in-out;
+                -webkit-transition: all .3s ease-in-out;
+                -moz-transition: all .3s ease-in-out;
+                -ms-transition: all .3s ease-in-out;
+                -o-transition: all .3s ease-in-out;
+                border-radius: 0px !important;
+                -webkit-border-radius: 0px !important;
+                -moz-border-radius: 0px !important;
+                -ms-border-radius: 0px !important;
+                -o-border-radius: 0px !important;
+                &:focus {
+                    outline: 0;
+                    border-color: $mainColor;
+                    background-clip: inherit;
+                    box-shadow: none !important;
+                    transition: all .3s ease-in-out;
+                    -webkit-transition: all .3s ease-in-out;
+                    -moz-transition: all .3s ease-in-out;
+                    -ms-transition: all .3s ease-in-out;
+                    -o-transition: all .3s ease-in-out;
+                    ~ label {
+                        opacity: 0;
+                        transition: all .3s ease-in-out;
+                        -webkit-transition: all .3s ease-in-out;
+                        -moz-transition: all .3s ease-in-out;
+                        -ms-transition: all .3s ease-in-out;
+                        -o-transition: all .3s ease-in-out;
+                    }
+                }
+            }
+            label {
+                position: absolute;
+                left: 1rem;
+                margin-bottom: 0 !important;
+                font-size: .8rem !important;
+                color: black;
+                opacity: 0.4;
+                font-weight: bold;
+                cursor: text;
+                transition: all .3s ease-in-out;
+                -webkit-transition: all .3s ease-in-out;
+                -moz-transition: all .3s ease-in-out;
+                -ms-transition: all .3s ease-in-out;
+                -o-transition: all .3s ease-in-out;
+                &.email_label {
+                    top: 10px;
+                }
+            }
+        }
+        textarea {
+            resize: none;
+        }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+        }
+    }
+    .g-recaptcha {
+        width: 100%;
+        div {
+            width: 100% !important;
+            iframe {
+                width: 100%;
+            }
+
+        }
+        .rc-anchor-light {
+            background: white !important;
+        }
+        .rc-anchor-normal {
+            width: 100% !important;   
+        }
+    }
+    button {
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        color: white;
+        text-align: center;
+        width: 100%;
+        &:hover {
+            background-color: white;
+            border: 1px solid $mainColor;
+        } 
+    }   
+    @media (max-width: 768px) {
+        margin-bottom: 4rem;
+    }
+} 

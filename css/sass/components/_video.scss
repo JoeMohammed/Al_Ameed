@@ -1,4 +1,4 @@
-.video {
+.video_coffee {
     cursor: pointer;
     overflow: hidden;
     position: relative;
@@ -48,7 +48,7 @@
 }
 
 @media (max-width: 768px) {
-    .video {
+    .video_coffee {
         i {
             padding: 20px !important;
             font-size: 10px !important;

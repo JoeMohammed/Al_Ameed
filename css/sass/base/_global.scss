@@ -1,3 +1,267 @@
 /* ====================================== _____________ Global Styles _____________ ====================================== */
+.banner {
+  &.internal {
+    position: relative;
+    height: 350px;
+    max-height: 350px;
+  }
+  &_bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba($color: $blkColor, $alpha: 0.5);
+    z-index: 3;
+    padding: 20px 0;
+    color: $whtColor;
+    &_title {
+      font-size: $bigHeadFont;
+      font-weight: 600;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+    &_share {
+      font-size: $bigFont;
+      font-weight: 400;
+      margin-bottom: 0;
+      @include hoverLink;
+      i {
+        margin-left: 5px;
+      }
+    }
+  }
+}
 
+.dropdown {
+  position: relative;
+  &:hover {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+  .dropdown-menu {
+    right: 0;
+    top: 90%;
+    left: auto;
+    min-width: 350px;
+    padding: 12px 18px;
+    background-color: rgba($color: $blkColor, $alpha: 0.9);
+    color: $whtColor;
+    transition: $slowTransition;
+    &:hover {
+      display: block;
+    }
+    @media (max-width: 576px) {
+      right: -50%;
+      transform: translateX(9%);
+    }
+    .dropdown_content {
+      &_title {
+        font-size: $paragraphFont;
+        padding-bottom: 5px;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: 0;
+          width: 15%;
+          height: 1.5px;
+          background-color: $mainColor;
+          z-index: 1;
+        }
+      }
+      .dropdown-item {
+        padding: 0;
+        padding-bottom: 5px;
+        margin: 5px 0;
+        color: $whtColor;
+        transition: $mainTransition;
+        position: relative;
+        font-size: $paragraphFont;
+        &::before {
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: 0;
+          width: 0;
+          transition: $mainTransition;
+          height: 1px;
+          background-color: $mainColor;
+        }
+        &:hover {
+          background-color: transparent;
+          &::before {
+            width: 50%;
+          }
+        }
+      }
+    }
+    .dropdown-item {
+      padding: 0;
+      padding-bottom: 5px;
+      margin: 5px 0;
+      color: $whtColor;
+      transition: $mainTransition;
+      position: relative;
+      font-size: $paragraphFont;
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 0;
+        transition: $mainTransition;
+        height: 1px;
+        background-color: $mainColor;
+      }
+      &:hover {
+        background-color: transparent;
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.search_popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: $blkColor, $alpha: 0.85);
+  z-index: 992;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  &_box {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    .close {
+      color: $whtColor;
+      position: absolute;
+      right: 5%;
+      top: 5%;
+    }
+    &_form {
+      display: flex;
+      position: static !important;
+      opacity: 1 !important;
+      width: 100% !important;
+      .form-group {
+        width: 100%;
+        label {
+          font-size: $mainFont;
+          color: $whtColor;
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  &.nav-tabs {
+    padding: 50px 0;
+    border: 0;
+    text-align: center;
+    justify-content: center;
+    .nav-item {
+      .nav-link {
+        border: none;
+        position: relative;
+        font-size: $paragraphFont;
+        color: $blkColor;
+        text-transform: uppercase;
+        transition: $mainTransition;
+        &:hover,
+        &.active {
+          color: $mainColor;
+        }
+        &::after {
+          position: absolute;
+          content: "/";
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: $bigFont;
+          font-weight: 400;
+          color: $blkColor;
+        }
+      }
+      &:last-of-type {
+        .nav-link {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.parent_float {
+  line-height: 0;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 3;
+  -moz-column-gap: 0px;
+  column-count: 3;
+  column-gap: 0px;
+  @media (max-width: 576px) {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+  @media (min-width: 576px) and (max-width: 991px) {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+  @media (min-width : 992px ) and (max-width : 1199px ) {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+
+.gallery_focus {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  padding: 5px 5px;
+  &_link {
+    display: block;
+    transition: $mainTransition;
+    overflow: hidden;
+    position: relative;
+    .overlay_gallery {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: $blkColor, $alpha: 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 20px;
+      transform: scaleX(0);
+      transition: $slowTransition;
+    }
+    &:hover {
+      .overlay_gallery {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
 /* ====================================== _____________ Global Styles _____________ ====================================== */

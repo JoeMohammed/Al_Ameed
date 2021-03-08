@@ -1,13 +1,667 @@
 /* ====================================== _____________ Home Page Styles _____________ ====================================== */
 .homePage {
+  // __________________________________________________________ Banner Section __________________________________________________________ //
   .banner {
     background-image: url(../img/homePage/bg.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
     width: 100%;
-    // background-attachment: fixed;
+    background-attachment: fixed;
+    position: relative;
     @include overlay;
+    &_content {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 80%;
+      margin: auto;
+      position: relative;
+      z-index: 3;
+      @media (max-width: 911px) {
+        width: 100%;
+      }
+      &_title {
+        text-transform: uppercase;
+        font-size: $bigHeadFont;
+        font-weight: 400;
+        color: $whtColor;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-bottom: 3px solid $mainColor;
+      }
+      &_description {
+        font-size: $hugeFont;
+        font-weight: 300;
+        margin-bottom: 0;
+        color: $whtColor;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+    &_discoverBuy {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      padding: 20px 0;
+      background-color: rgba($color: $blkColor, $alpha: 0.5);
+      z-index: 4;
+      transition: $mainTransition;
+      &_title {
+        font-size: $headFont;
+        font-weight: 300;
+        color: $offWhiteColor;
+        margin-bottom: 0;
+        padding-bottom: 5px;
+        position: relative;
+        transition: $mainTransition;
+        cursor: pointer;
+        &::before {
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: 0;
+          width: 0;
+          height: 1.5px;
+          background-color: $mainColor;
+          transition: $mainTransition;
+        }
+        &.active {
+          margin-bottom: 20px;
+          &::before {
+            width: 120px;
+          }
+        }
+        &:hover {
+          &::before {
+            width: 120px;
+          }
+        }
+      }
+      &_list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        display: none;
+        transition: $mainTransition;
+        &_item {
+          margin: 0 15px;
+          &:first-of-type {
+            margin-left: 0;
+          }
+          &_link {
+            color: $offWhiteColor;
+            font-size: $mainFont;
+            @include hoverLink;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
   }
+  // __________________________________________________________ Banner Section __________________________________________________________ //
+
+  // __________________________________________________________ Coffe Section __________________________________________________________ //
+  .coffee {
+    padding: 30px 0;
+    &_card {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      &_body {
+        padding: 15px 0;
+        &_title {
+          margin-bottom: 10px;
+          font-size: $headFont;
+        }
+        &_text {
+          margin-bottom: 10px 0;
+          line-height: 1.3;
+        }
+      }
+    }
+  }
+  // __________________________________________________________ Coffe Section __________________________________________________________ //
+
+  // __________________________________________________________ Products & Solutions Section __________________________________________________________ //
+  .products_solutions {
+    position: relative;
+    @media (max-width: 991px) {
+      min-height: 150vh;
+      min-height: 1170px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 60%;
+      height: 100%;
+      background-color: $grayColor;
+      z-index: -1;
+      @media (max-width: 991px) {
+        width: 100%;
+        height: 40%;
+        background-color: $blkColor2;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 0;
+      width: 40%;
+      height: 100%;
+      background-color: $blkColor2;
+      z-index: -1;
+      @media (max-width: 991px) {
+        width: 100%;
+        height: 60%;
+        top: auto;
+        bottom: 0;
+        background-color: $grayColor;
+      }
+    }
+    .xs-gray {
+      @media (max-width: 991px) {
+        // background-color: $grayColor;
+        order: 2;
+        padding-top: 50px;
+      }
+    }
+    .xs-black {
+      @media (max-width: 991px) {
+        // background-color: $blkColor2;
+        order: 1;
+      }
+    }
+    &_title {
+      font-size: $bannerFont;
+      span {
+        font-size: $bigHeadFont;
+      }
+    }
+    &_text {
+      margin-bottom: 200px;
+      @media (max-width: 991px) {
+        margin-bottom: 20px;
+      }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        max-width: 55%;
+      }
+    }
+    &_content {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    .content {
+      .img {
+        position: absolute;
+        right: -12%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 30;
+        @media (max-width: 991px) {
+          position: static;
+          text-align: center;
+          transform: translateY(0);
+          margin: 15px 0;
+        }
+        img {
+          @media (min-width: 992px) and (max-width: 1199px) {
+            max-width: 250px;
+          }
+          filter: drop-shadow(
+            0 15px 20px rgba($color: $blkColor, $alpha: 0.16)
+          );
+        }
+      }
+    }
+    &_nav {
+      padding: 15px 0;
+      &_list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        &_item {
+          margin: 0 15px;
+          &_link {
+            color: $offWhiteColor;
+            font-size: $bigFont;
+            font-weight: 500;
+            text-transform: uppercase;
+            @include hoverLink;
+            &.active {
+              color: $whtColor;
+            }
+          }
+        }
+      }
+    }
+    .navigation_content {
+      &:not(.active) {
+        display: none;
+      }
+    }
+    .slider {
+      height: 500px;
+      padding: 100px 65px;
+      position: relative;
+      @media (max-width: 991px) {
+        padding: 50px 65px;
+        height: 350px;
+      }
+      @media (max-width: 576px) {
+        padding: 50px 35px;
+      }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        padding: 100px 30px 100px 65px;
+      }
+    }
+    &_swiper {
+      height: 160px;
+      position: relative;
+      z-index: 8;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      text-align: left;
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        width: 100%;
+        height: 26%;
+        background: rgb(24, 24, 24);
+        z-index: 2;
+      }
+      &::before {
+        top: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(24, 24, 24, 1) 0%,
+          rgba(24, 24, 24, 0) 100%
+        );
+      }
+      &::after {
+        bottom: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(24, 24, 24, 0) 0%,
+          rgba(24, 24, 24, 1) 100%
+        );
+      }
+      &_slide {
+        width: 75%;
+        margin-left: auto;
+        @media (max-width: 576px) {
+          width: 100%;
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+          width: 50%;
+          margin: auto;
+        }
+        @media (min-width: 992px) and (max-width: 1199px) {
+          width: 100%;
+        }
+        &.swiper-slide-active {
+          .products_solutions_swiper_slide_link {
+            p {
+              color: $whtColor;
+              &::before {
+                opacity: 0;
+              }
+              &::after {
+                opacity: 1;
+              }
+            }
+          }
+        }
+        p {
+          font-size: $paragraphFont;
+          padding-left: 15px;
+          position: relative;
+          margin-bottom: 0;
+          &::before,
+          &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-image: url(../img/homePage/bean.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0;
+            transition: $mainTransition;
+          }
+          &::before {
+            opacity: 1;
+            // filter: blur(3px);
+            filter: grayscale(1);
+            // filter: saturate(2.2);
+          }
+        }
+      }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $mainColor;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $whtColor;
+      top: auto;
+      margin-top: 0;
+      bottom: 0;
+      // @media (max-width :)
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .swiper-button-prev {
+    left: auto;
+    right: 65px;
+  }
+  // __________________________________________________________ Products & Solutions Section __________________________________________________________ //
+
+  // __________________________________________________________ Map Section __________________________________________________________ //
+  .map {
+    position: relative;
+    @media (max-width: 576px) {
+      padding-top: 50px;
+    }
+    &_nav {
+      padding: 25px 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      &_list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        &_item {
+          margin: 0 20px;
+          position: relative;
+          transition: $mainTransition;
+          // overflow: hidden;
+          position: relative;
+          &.p_left {
+            padding-left: 200px;
+          }
+          &_link {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            color: $offWhiteColor;
+            transition: $mainTransition;
+            @include hoverLink;
+            &.dropdown-toggle{
+              &:hover{
+                ~ .dropdown-menu{
+                  display: block;
+                }
+              }
+            }
+            span {
+              font-size: $paragraphFont;
+              margin-right: 15px;
+            }
+            &.map_search {
+              position: relative;
+              transition: $mainTransition;
+              span {
+                color: $mainColor;
+                transition: $mainTransition;
+              }
+              i {
+                transition: $mainTransition;
+              }
+            }
+          }
+        }
+      }
+    }
+    &_destribution {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $offWhiteColor;
+      left: 25%;
+      width: 20%;
+      @media (max-width: 767px) {
+        position: static;
+        top: auto;
+        bottom: 0;
+        transform: translateY(0);
+        padding: 30px 15px;
+        width: 100%;
+        left: 0;
+      }
+      &_title {
+        text-transform: uppercase;
+      }
+      &_text {
+        color: $offWhiteColor;
+      }
+    }
+  }
+  // __________________________________________________________ Map Section __________________________________________________________ //
+
+  // __________________________________________________________ Latest News Section __________________________________________________________ //
+  .latest_news {
+    padding: 40px 0;
+    &_swiper {
+      padding: 50px 0;
+      &_slide {
+        height: 570px;
+        max-width: 300px;
+        transition: $mainTransition;
+        .card {
+          height: 100%;
+          .card_header {
+            @include overlay;
+          }
+          .absolute-active {
+            display: none;
+          }
+        }
+        @media (max-width: 767px) {
+          max-width: 225px;
+        }
+        &.swiper-slide-active {
+          width: 600px;
+          max-width: 600px;
+          @media (max-width : 767px){
+            width: 85%;
+            max-width: 85%;
+          }
+          .card {
+            .card_header {
+              position: relative;
+              animation: fadeIn;
+              animation-duration: 2s;
+              animation-delay: 0.1s;
+              .absolute-active {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: auto;
+                bottom: 0;
+                padding: 25px 20px;
+                z-index: 2;
+                .subTitle {
+                  animation: fadeInUp;
+                  animation-duration: 2s;
+                  animation-delay: 0.3s;
+                }
+                .card_body_date {
+                  animation: fadeInUp;
+                  animation-duration: 2s;
+                  animation-delay: 0.5s;
+                }
+              }
+            }
+            .card_body {
+              padding: 25px 15px;
+              .card_body_date {
+                display: none;
+              }
+              .card_body_title {
+                display: none;
+              }
+              .card_body_text {
+                animation: fadeInUp;
+                animation-duration: 2s;
+                animation-delay: 0.7s;
+              }
+              .arrow_link {
+                animation: fadeInUp;
+                animation-duration: 2s;
+                animation-delay: 0.9s;
+              }
+            }
+          }
+        }
+      }
+    }
+    &_card {
+      position: relative;
+      overflow: hidden;
+      &_header {
+        overflow: hidden;
+        overflow-x: hidden !important;
+        @media (max-width: 767px) {
+          margin-bottom: 1rem;
+        }
+        img {
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+  // __________________________________________________________ Latest News Section __________________________________________________________ //
+
+  // __________________________________________________________ Testimonials Section __________________________________________________________ //
+  .testimonials {
+    &_swiper {
+      padding: 40px 0;
+      &_slide {
+        transition: $mainTransition;
+        &_card {
+          box-shadow: 0 3px 6px rgba($color: $blkColor, $alpha: 0.16) !important;
+          background-color: $whtColor;
+          padding: 25px 40px;
+          border-radius: 4px;
+          transition: $mainTransition;
+          .chat_icon {
+            i {
+              color: $mainColor;
+              transition: $mainTransition;
+            }
+          }
+          .smTitle {
+            color: #424242;
+            transition: $mainTransition;
+          }
+        }
+        &.swiper-slide-active {
+          .testimonials_swiper_slide_card {
+            background-color: $mainColor;
+            box-shadow: none !important;
+            .chat_icon {
+              i {
+                color: $whtColor;
+              }
+            }
+            .smTitle {
+              color: $whtColor;
+            }
+            p,
+            .p {
+              color: $whtColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  .swiper-container-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    border: 2px solid $mainColor;
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $mainColor !important;
+  }
+  // __________________________________________________________ Testimonials Section __________________________________________________________ //
+
+  // __________________________________________________________ Preparation Section __________________________________________________________ //
+  .preparation {
+    background-image: url(../img/homePage/preparation-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 150px 0;
+    @media (max-width: 991px) {
+      padding: 50px 0;
+    }
+    .play_icon {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      background-color: $mainColor;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $whtColor;
+      text-transform: uppercase;
+      margin: auto;
+      border: 1px solid transparent;
+      transition: $mainTransition;
+      &:hover {
+        background-color: transparent;
+        border-color: $mainColor;
+      }
+    }
+  }
+  // __________________________________________________________ Preparation Section __________________________________________________________ //
 }
 /* ====================================== _____________ Home Page Styles _____________ ====================================== */

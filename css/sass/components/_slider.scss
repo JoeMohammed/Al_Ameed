@@ -1,3 +1,55 @@
 /* ====================================== _____________ Slider Styles _____________ ====================================== */
+.gallery_swiper{
+    height: 500px;
+    padding: 60px 0;
+    .swiper-slide{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .swiper-pagination-bullet{
+        width: 10px;
+        height: 10px;
+        &.swiper-pagination-bullet-active{
+            background-color: $mainColor;
+        }
+    }
+}
 
+.gallery_info_swiper{
+    height: 400px !important;
+    padding: 0;
+    .swiper-slide{
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after{
+        display: none;
+    }
+    .swiper-button-next, .swiper-button-prev{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $mainColor;
+        color: $whtColor;
+        transition: $mainTransition;
+        &:hover{
+            background-color: $whtColor;
+            color: $mainColor;
+        }
+    }
+}
+.gallery-thumbs{
+    height: 125px!important;
+    padding: 0!important;
+    .swiper-slide{
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+    }
+    .swiper-slide-thumb-active{
+        border: 7px solid $mainColor;
+    }
+}
 /* ====================================== _____________ Slider Styles _____________ ====================================== */
