@@ -200,6 +200,7 @@ $(document).ready(function () {
   });
   // _________ Products & Solutions Swiper
 
+<<<<<<< HEAD
   // _________ News Swiper
   var NewsSwiper = new Swiper(".swiper-container.latest_news_swiper", {
     autoHeight: true,
@@ -310,14 +311,27 @@ $(document).ready(function () {
     e.stopPropagation();
   });
   // _________ Gallery Swiper Swiper
+=======
+  // _________ Map Search
+  $(".homePage .map_nav_list_item_link.map_search").click(function (e) {
+    e.preventDefault();
+    $(this).children("span").fadeToggle(1);
+    $(this).siblings(".form_search").delay(3).toggleClass("open");
+    $(this).parent(".map_nav_list_item").toggleClass("p_left");
+  });
+  // _________ Map Search
+>>>>>>> 7593062aa1c1aa3607119acea4bf8c4927678073
 
   // _________ Testimonials Swiper
   var testimonialsSwiper = new Swiper(".swiper-container.testimonials_swiper", {
     slidesPerView: 3,
     spaceBetween: 30,
+<<<<<<< HEAD
     autoplay: {
       delay: 5000,
     },
+=======
+>>>>>>> 7593062aa1c1aa3607119acea4bf8c4927678073
     centeredSlides: true,
     loop: true,
     pagination: {

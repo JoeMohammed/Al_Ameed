@@ -43,7 +43,11 @@ header {
       transition: $mainTransition;
       &_item {
         margin: 0 8px;
+<<<<<<< HEAD
         
+=======
+        overflow: hidden;
+>>>>>>> 7593062aa1c1aa3607119acea4bf8c4927678073
         @media (max-width : 576px) {
           margin: 0 3px;
         }

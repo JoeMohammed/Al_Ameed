@@ -87,14 +87,18 @@ p,
     color: $whtColor;
     transition: $mainTransition;
     border: 1px solid transparent;
+<<<<<<< HEAD
     &.whtBgColor{
       background-color: $whtColor;
       color: $mainColor;
     }
+=======
+>>>>>>> 7593062aa1c1aa3607119acea4bf8c4927678073
   }
   .text {
     color: $textColor;
     transition: $mainTransition;
+<<<<<<< HEAD
     &.whtColor{
       color: $whtColor;
     }
@@ -111,6 +115,20 @@ p,
     //   padding-left: 15px;
     // }
     opacity: .8; 
+=======
+  }
+  &:hover {
+    padding-left: 5px;
+    .arrow {
+      background-color: $blkColor;
+      border-color: $mainColor;
+      transform: scale(1.1);
+    }
+    .text {
+      color: $mainColor;
+      padding-left: 15px;
+    }
+>>>>>>> 7593062aa1c1aa3607119acea4bf8c4927678073
   }
 }
 // == Titles & Test //

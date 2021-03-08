@@ -1,4 +1,5 @@
 /* ====================================== _____________ Global Styles _____________ ====================================== */
+<<<<<<< HEAD
 .banner {
   &.internal {
     position: relative;
@@ -265,3 +266,38 @@
   }
 }
 /* ====================================== _____________ Global Styles _____________ ====================================== */
+=======
+.banner{
+    &.internal{
+        position: relative;
+        max-height: 350px;
+    }
+    &_bar{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        background-color: rgba($color: $blkColor, $alpha: .5);
+        z-index: 3;
+        padding: 20px 0;
+        color: $whtColor;
+        &_title{
+            font-size: $bigHeadFont;
+            font-weight: 600;
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+        &_share{
+            font-size: $bigFont;
+            font-weight: 400;
+            margin-bottom: 0;
+            @include hoverLink;
+            i{
+                margin-left: 5px
+            }
+        }
+    }
+}
+/* ====================================== _____________ Global Styles _____________ ====================================== */
+>>>>>>> 7593062aa1c1aa3607119acea4bf8c4927678073
